@@ -1,0 +1,415 @@
+// when you export an internal's cfg from unity and overwrite the old one,
+// you need to go back and add non-props like seats or cameras, and modules
+// to the cfg manually - so this is the backup file. Paste above prop locations.
+
+
+INTERNAL
+{
+	name = internalkso
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = PilotSeat
+		portraitCameraName = camera_pic
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = CmdrSeat
+		portraitCameraName = camera_copilot
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = MS_SeatRight
+		portraitCameraName = camera_rear_right
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = MS_SeatLeft
+		portraitCameraName = camera_rear_left
+		allowCrewHelmet = false
+	}
+ 
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = Lower_SeatRight
+		portraitCameraName = camera_low1
+		allowCrewHelmet = false
+	}
+
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = Lower_SeatLeft
+		portraitCameraName = camera_low2
+		allowCrewHelmet = false
+	}
+
+	MODULE
+  	{
+    	name = InternalCameraSwitch
+    	colliderTransformName = ivatouch1
+    	cameraTransformName = ivacam1
+  	}
+ 	MODULE
+  	{
+   	name = InternalCameraSwitch
+   	colliderTransformName = ivatouch2
+    	cameraTransformName = ivacam2
+  	}
+ 	MODULE
+ 	{
+  	name = InternalCameraSwitch
+  	colliderTransformName = ivatouch3
+   	cameraTransformName = ivacam3
+  	}
+	MODULE
+  	{
+    	name = InternalCameraSwitch
+    	colliderTransformName = ivatouch4
+    	cameraTransformName = ivacam4
+  	}
+ 	MODULE
+  	{
+   	name = InternalCameraSwitch
+   	colliderTransformName = ivatouch5
+    	cameraTransformName = ivacam5
+  	}
+ 	MODULE
+ 	{
+  	name = InternalCameraSwitch
+  	colliderTransformName = ivatouch6
+   	cameraTransformName = ivacam6
+  	}
+	MODULE
+  	{
+    	name = InternalCameraSwitch
+    	colliderTransformName = ivatouch7
+    	cameraTransformName = ivacam7
+  	}
+
+ 	
+	MODULE
+  	{
+    	name = InternalCameraSwitch
+    	colliderTransformName = ivatouch9
+    	cameraTransformName = ivacam8
+  	}
+
+	MODULE
+  	{
+    	name = InternalCameraSwitch
+    	colliderTransformName = ivatouch10
+    	cameraTransformName = ivacam9
+  	}
+
+	//PROP
+	//{
+  	//name = throttle
+
+
+	MODULE
+{
+    name = JSIActionGroupSwitch
+    internalLightName = point_bright
+    switchTransform = ivatouch8
+    perPodPersistenceName = ksocabin
+    actionName = intlight
+}
+MODULE
+{
+    name = JSIActionGroupSwitch
+    animationName = cmdlights
+    animateExterior = true
+    perPodPersistenceName = ksocabin
+    actionName = dummy
+}
+
+
+
+  	MODULE
+  	{
+    	name = InternalLeverThrottle
+	//angleMin = -60
+	//angleMax = 0
+	//leverName = throttles
+
+  	}
+	MODULE
+	{
+		name = InternalVSI
+		indicatorName = vertical_speed_needle_left
+		axis = 0, 1, 0
+		increments
+		{
+			inc = 0, 0
+			inc = 80, 10
+			inc = 120, 100
+			inc = 170, 1000
+		}
+	}
+	MODULE
+	{
+		name = InternalVSI
+		indicatorName = vertical_speed_needle_right
+		axis = 0, 1, 0
+		increments
+		{
+			inc = 0, 0
+			inc = 35, 5
+			inc = 70, 10
+			inc = 115, 100
+			inc = 167, 1000
+		}
+	}
+	MODULE
+	{
+		name = InternalRadarAltitude
+		indicatorName = radar_alt_needle_left
+		axis = 0, 1, 0
+		increments
+		{
+			inc = 0, 0
+			inc = 34, 100
+			inc = 70, 200
+			inc = 110, 300
+			inc = 145, 400
+			inc = 180, 500
+			inc = 215, 1000
+			inc = 232, 2000
+			inc = 250, 3000
+		}
+	}
+	MODULE
+	{
+		name = InternalRadarAltitude
+		indicatorName = radar_alt_needle_right
+		axis = 0, 1, 0
+		increments
+		{
+			inc = 0, 0
+			inc = 34, 100
+			inc = 70, 200
+			inc = 110, 300
+			inc = 145, 400
+			inc = 180, 500
+			inc = 215, 1000
+			inc = 232, 2000
+			inc = 250, 3000
+		}
+	}
+	MODULE
+	{
+		name = InternalAltimeterThreeHands
+		handAxis = 0, 1, 0
+		hand100Name = altimeter_needle_10s_left
+		hand1000Name = altimeter_needle_100s_left
+		hand10000Name = altimeter_needle_1000s_left
+	}
+	MODULE
+	{
+		name = InternalAltimeterThreeHands
+		handAxis = 0, 1, 0
+		hand100Name = altimeter_needle_10s_right
+		hand1000Name = altimeter_needle_100s_right
+		hand10000Name = altimeter_needle_1000s_right
+	}
+
+  MODULE
+  {
+    name = InternalIndicatorPanel
+    indicators
+    {
+       indicator
+       {
+          name = Panel_RCS
+          colorOn = 1, 0.81, 0.31
+          colorOff = 0, 0, 0
+          value = RCS
+       }
+       indicator
+       {
+          name = Panel_SAS
+          colorOn = 1, 0.81, 0.31
+          colorOff = 0, 0, 0
+          value = SAS
+       }
+       indicator
+       {
+          name = Panel_GEAR_NOSE
+          colorOn = 1, 0.81, 0.31
+          colorOff = 0, 0, 0
+          value = Gear
+       }
+       indicator
+       {
+          name = Panel_GEAR_LEFT
+          colorOn = 1, 0.81, 0.31
+          colorOff = 0, 0, 0
+          value = Gear
+       }
+       indicator
+       {
+          name = Panel_GEAR_RIGHT
+          colorOn = 1, 0.81, 0.31
+          colorOff = 0, 0, 0
+          value = Gear
+       }
+       indicator
+       {
+          name = indicator04
+          colorOn = 1, 0.43, 0
+          colorOff = 0, 0, 0
+          value = Oxygen
+       }
+       indicator
+       {
+          name = Panel_Rot
+          colorOn = 1, 0.81, 0.31
+          colorOff = 0, 0, 0
+          value = KillRot
+       }
+       indicator
+       {
+          name = indicator06
+          colorOn = 1, 0, 0.06
+          colorOff = 0, 0, 0
+          value = MECO
+       }
+       indicator
+       {
+          name = Panel_stage
+          colorOn = 1, 0.81, 0.31
+          colorOff = 0, 0, 0
+          value = Stage
+       }
+       indicator
+       {
+          name = indicator08
+          colorOn = 0, 1, 0.23
+          colorOff = 0, 0, 0
+          value = Airlock
+       }
+       indicator
+       {
+          name = indicator09
+          colorOn = 0, 1, 0.23
+          colorOff = 0, 0, 0
+          value = Warn
+       }
+       indicator
+       {
+          name = indicator10
+          colorOn = 0, 1, 0.06
+          colorOff = 0, 0, 0
+          value = Heat
+       }
+       indicator
+       {
+          name = indicator11
+          colorOn = 0, 1, 0.06
+          colorOff = 0, 0, 0
+          value = Fuel
+       }
+       indicator
+       {
+          name = Panel_high_g
+          colorOn = 1, 0.81, 0.31
+          colorOff = 0, 0, 0
+          value = HighG
+       }
+    }
+  }
+
+  	MODULE
+  	{
+    	name = InternalAtmosphereDepth
+    	indicatorName = atmosphere_needle
+    	min = -0.05486, 0.0342, 0.41466
+    	max = 0.0528, 0.0342, 0.41466
+  	}
+
+
+  MODULE
+{
+	name = FSinternalPropRotator 
+
+// allows for rotating three different objects in an engine or other part. Must be three separate objects or empties.
+
+	pitchObject = stick1pitch //rotates around the y axis
+	//yawObject = stick1yaw //rotates around the x axis
+	rollObject = stick1roll // rotates around the z axis
+
+//0,0,0 etc can be used to add to the 0,0,0 + p,r,y rotation reset each update
+
+	pitchDefaultRotation =  0, 0, 0 
+	rollDefaultRotation =  0, 0, 180
+	yawDefaultRotation =  0, 0, 0
+	axisMultiplier = 12, 12, 12 // pitch, roll, yaw
+}
+
+
+  MODULE
+{
+	name = FSinternalPropRotator 
+
+// allows for rotating three different objects in an engine or other part. Must be three separate objects or empties.
+
+	pitchObject = stick2pitch //rotates around the y axis
+	//yawObject = stick2yaw //rotates around the x axis
+	rollObject = stick2roll // rotates around the z axis
+
+//0,0,0 etc can be used to add to the 0,0,0 + p,r,y rotation reset each update
+
+	pitchDefaultRotation =  0, 0, 0 
+	rollDefaultRotation =  0, 0, 180
+	yawDefaultRotation =  0, 0, 0
+	axisMultiplier = 12, 12, 12 // pitch, roll, yaw
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
